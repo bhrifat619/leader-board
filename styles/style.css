@@ -5,67 +5,155 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
+
 /* ==================================== */
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
 .container {
     width: 870px;
     /* height: 679px; */
     background-color: #FFFFFF;
     border-radius: 5px;
-    
+    margin-top: 2rem;
 }
-.top-player{
+
+.top-player {
     padding: 30px;
 }
-.players{
+
+.players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
 }
-.player{
+
+.player {
     display: flex;
     gap: 16px;
     margin-bottom: 29px;
     align-items: center;
 }
-.player img{
+
+.player img {
     height: 56px;
     width: 56px;
 }
-.title{
+
+.title {
     color: #562EFF;
     font-size: 24px;
     margin-bottom: 30px;
 }
+
 /* =========================== */
-.top-blog{
+.top-blog {
     padding: 30px;
     padding-top: 0;
 }
-.blogs{
+
+.blogs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-.blog{
+
+.blog {
     display: flex;
     align-items: center;
     gap: 18px;
 }
-.blog .content a{
+
+.blog .content a {
     font-size: 16px;
     color: #562EFF;
     text-decoration: none;
 }
-.blogs .blog img{
+
+.blogs .blog img {
     width: 177px;
-height: 117px;
+    height: 117px;
 }
+
+/* ============================== */
+.latest-course{
+    padding: 30px;
+}
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+.course{
+    width: 14rem;
+    border-radius: 17px;
+    box-shadow: 0 12px 12px 0 rgb(0,0,0,0.1);
+    /* padding: 2px; */
+}
+.courses .course img {
+    width: 224px;
+    height: 104px;
+    margin-bottom: 1rem;
+}
+.courses .course p{
+    color:#1E1E1E;
+}
+.courses .course a{
+    text-decoration: none;
+    color: #ED6B4F;
+    font-size: 11px;
+}
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    gap: 38px;
+}
+.course .rating .stars .star{
+    color:#FFC014;
+    font-size: 12px;
+}
+.course .rating .stars span{
+    color: #A2A2A2;
+    font-size: 15px;
+}
+.course .rating  .duration .clock,
+.course .rating  .duration span{
+    color: #FF4A60;
+}
+/* ================================== */
+@media screen and (max-width:747px) {
+    .players, .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container{
+        width: 100%;
+    }
+    .player, .blog{
+        flex-direction: column;
+        
+    }
+    .blog{
+        align-items: flex-start;
+    }
+    .courses{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+    }
+}
+
+/* ====================== */
+@media screen and (min-width:748px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+}
+
